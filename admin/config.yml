@@ -2,30 +2,9 @@ backend:
   name: github
   repo: rkmgpublishing/rkmg-elite
   branch: main
+  base_url: https://rkmg-cms-auth.rkmadagency.workers.dev
+  auth_endpoint: auth
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-collections:
-  - name: "news"
-    label: "News Articles"
-    folder: "news"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "catalogue"
-    label: "Music Catalogue"
-    folder: "catalogue"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Song Title", name: "title", widget: "string" }
-      - { label: "Artist", name: "artist", widget: "string" }
-      - { label: "ISRC", name: "isrc", widget: "string" }
-      - { label: "Spotify Embed", name: "spotify", widget: "text" }
-      - { label: "Artwork", name: "image", widget: "image" }
-      - { label: "Description", name: "body", widget: "markdown" }
